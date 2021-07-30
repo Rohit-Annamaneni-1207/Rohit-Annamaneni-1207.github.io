@@ -21,8 +21,8 @@ function Dots()
     this.dy = (Math.random()-0.5);
     this.radius = 5;
 
-    this.dx = 1.5*(this.dx/Math.abs(this.dx));
-    this.dy = 1.5*(this.dy/Math.abs(this.dy));
+    this.dx = 2*(this.dx/Math.abs(this.dx));
+    this.dy = 2*(this.dy/Math.abs(this.dy));
     this.distance = undefined;
     this.inter = [];
 
