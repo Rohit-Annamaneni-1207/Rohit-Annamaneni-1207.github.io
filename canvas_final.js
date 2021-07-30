@@ -21,8 +21,8 @@ function Dots()
     this.dy = (Math.random()-0.5);
     this.radius = 5;
 
-    this.dx = 2*(this.dx/Math.abs(this.dx));
-    this.dy = 2*(this.dy/Math.abs(this.dy));
+    this.dx = 1.3*(this.dx/Math.abs(this.dx));
+    this.dy = 1.3*(this.dy/Math.abs(this.dy));
     this.distance = undefined;
     this.inter = [];
 
@@ -60,7 +60,7 @@ function Dots()
 var dotArray = [];
 var i = 0,j = 0;
 
-for (i=0;i<40;i++)
+for (i=0;i<70;i++)
 {
     dotArray.push(new Dots());
 }
