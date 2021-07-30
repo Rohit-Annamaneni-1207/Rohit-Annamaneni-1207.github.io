@@ -17,11 +17,11 @@ if (innerWidth>1000 && innerHeight>600)
 }
 else if (innerWidth<420)
 {
-    factor = 0.3;
+    factor = 0.7;
 }
 else
 {
-    factor = 0.5;
+    factor = 0.8;
 }
 
 console.log(factor);
