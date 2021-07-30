@@ -18,12 +18,12 @@ if (innerWidth>1000 && innerHeight>600)
 }
 else if (innerWidth<420)
 {
-    factor_B = 1.8;
+    factor_B = 0.2;
     factor = 0.5;
 }
 else
 {
-    factor_B = 2.2;
+    factor_B = 0.2;
     factor = 0.5;
 }
 
@@ -55,7 +55,7 @@ function Dots()
         c.strokeStyle = "rgb(128, 128, 128)";
         c.fill();
         this.distance = Math.sqrt((mouse.x - this.x)*(mouse.x - this.x) + (mouse.y - this.y)*(mouse.y - this.y));
-        if (this.distance <=factor*400)
+        if (this.distance <=factor_B*400)
         {
             c.beginPath();
             c.moveTo(mouse.x,mouse.y);
@@ -112,7 +112,7 @@ function animate()
         {
             // connect(dotArray[i],dotArray[j]);
             dist = Math.sqrt((dotArray[i].x - dotArray[j].x)*(dotArray[i].x - dotArray[j].x) + (dotArray[i].y - dotArray[j].y)*(dotArray[i].y - dotArray[j].y));
-            if (dist<=factor*200)
+            if (dist<=factor_B*200)
             {
                 connect(dotArray[i],dotArray[j]);
             }
