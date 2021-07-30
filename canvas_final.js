@@ -60,7 +60,7 @@ function Dots()
 var dotArray = [];
 var i = 0,j = 0;
 
-for (i=0;i<30;i++)
+for (i=0;i<40;i++)
 {
     dotArray.push(new Dots());
 }
