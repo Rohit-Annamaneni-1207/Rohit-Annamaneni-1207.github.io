@@ -18,12 +18,12 @@ if (innerWidth>1000 && innerHeight>600)
 }
 else if (innerWidth<420)
 {
-    factor_B = 7;
+    factor_B = 100;
     factor = 0.5;
 }
 else
 {
-    factor_B = 7;
+    factor_B = 100;
     factor = 0.5;
 }
 
