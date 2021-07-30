@@ -82,7 +82,7 @@ function Dots()
 var dotArray = [];
 var i = 0,j = 0;
 
-for (i=0;i<factor*40;i++)
+for (i=0;i<factor_B*40;i++)
 {
     dotArray.push(new Dots());
 }
