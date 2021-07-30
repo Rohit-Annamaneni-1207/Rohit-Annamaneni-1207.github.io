@@ -10,17 +10,20 @@ var mouse = {
 console.log(innerWidth);
 console.log(innerHeight);
 
-var factor;
+var factor, factor_B;
 if (innerWidth>1000 && innerHeight>600)
 {
     factor = 1;
+    factor_B = 1;
 }
 else if (innerWidth<420)
 {
+    factor_B = 1.3;
     factor = 0.7;
 }
 else
 {
+    factor_B = 1.5;
     factor = 0.8;
 }
 
@@ -36,8 +39,8 @@ function Dots()
 {
     this.x = Math.random()*canva.width;
     this.y = Math.random()*canva.height;
-    this.dx = (Math.random()-0.5);
-    this.dy = (Math.random()-0.5);
+    this.dx = (Math.random()-0.5)*factor;
+    this.dy = (Math.random()-0.5)*factor;
     this.radius = 3;
 
     this.dx = 2*(this.dx/Math.abs(this.dx));
@@ -52,7 +55,7 @@ function Dots()
         c.strokeStyle = "rgb(128, 128, 128)";
         c.fill();
         this.distance = Math.sqrt((mouse.x - this.x)*(mouse.x - this.x) + (mouse.y - this.y)*(mouse.y - this.y));
-        if (this.distance <=factor*400)
+        if (this.distance <=factor_B*400)
         {
             c.beginPath();
             c.moveTo(mouse.x,mouse.y);
@@ -109,7 +112,7 @@ function animate()
         {
             // connect(dotArray[i],dotArray[j]);
             dist = Math.sqrt((dotArray[i].x - dotArray[j].x)*(dotArray[i].x - dotArray[j].x) + (dotArray[i].y - dotArray[j].y)*(dotArray[i].y - dotArray[j].y));
-            if (dist<=factor*200)
+            if (dist<=factor_B*200)
             {
                 connect(dotArray[i],dotArray[j]);
             }
